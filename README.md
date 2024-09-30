@@ -29,4 +29,46 @@ python setup.py build_ext --inplace
 ```
 If everything goes well, you will get many files. Cut `muse.py` and `_muse.xxxxxx.pyd` to your py dir, then `import muse`.
 
+## Create brand-new music
+Now your `muse` module should be accessible.
+
+### Use class Note to play note
+```c++
+// example.cpp
+// ...
+void main()
+{
+    Note midi_note;    // first, we get a Note object
+    midi_note.open();  // this will get your midi handle so that you can play note
+    midi_note.play_note(75, 100, 1, 0);
+      // to play a note, you should send note(0-127), velocity(0-127), instrument(0-127, default 0), channel(0-15, default 0)
+    Sleep(500);        // pause it, then you hearing sound.
+    midi_note.close()  // if everything done, don't forget to close it
+}
+```
+### Use class MarkovGenerator to play music
+If you have your models, you can easily create music with MarkovGenerator.  
+You need 3 model, for note, velocity and time. If one of witch has no model, it will use default const.
+```c++
+// example.cpp
+// ...
+void main()
+{
+    Note midi_note;
+    MarkovGenerater MC;
+
+    MC.set_module_note("output_note.model");   // load model for note
+    MC.set_module_time("output_time.model");
+    MC.set_fixed_velocity(100);                // if no loaded model, you can change the used default const
+    MC.set_seed(time(0));                      // you can set random seed with, such as, fortune number
+
+    midi_note.open();                          // certainly you need to open Note
+    for (int i = 0; i < 100; i++) {
+        std::cout << i << std::endl;
+        Sleep(0.5 * MC.play_note(midi_note));  // MarkovGenerater.play_note will return the time of note
+          // you should send a Note object, and you can change instrument(0-127, default 0) and channel(0-15, default 0)
+    }
+    midi_note.close();
+}
+```
 #### i will write all, maybe tomorrow
