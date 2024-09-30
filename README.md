@@ -24,10 +24,10 @@ If you want something above, try `muse`! Actually, I haven't found one can play 
   The program may be useful but can't be powerful. I'm sorry.
 
 ## Install muse
-First, download `muse.h`. Now you can use it in your cpp files. Easily. `#include "muse.h"`
-Next, download `setup.py` and `muse.i`. Then use [SWIG](https://github.com/swig/swig) (for example) to build Python module.
+First, download `muse.h`. Now you can use it in your cpp files. Easily. `#include "muse.h"`  
+Next, download `setup.py` and `muse.i`. Then use [SWIG](https://github.com/swig/swig) (for example) to build Python module.  
 ### Use swig to build muse
-Firstly, make sure your swig is OK.
+Firstly, make sure your swig is OK.  
 ```
 swig -c++ -python muse.i
 python setup.py build_ext --inplace
