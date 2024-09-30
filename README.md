@@ -20,7 +20,7 @@ If you want something above, try `muse`! Actually, I haven't found one can play 
 
 ## Install muse
 First, download `muse.h`. Now you can use it in your cpp files. Easily. `#include "muse.h"`
-Next, download `setup.py` and `muse.i`. Then use SWIG (for example) to build Python module.
+Next, download `setup.py` and `muse.i`. Then use [SWIG](https://github.com/swig/swig) (for example) to build Python module.
 ### Use swig to build muse
 Firstly, make sure your swig is OK.
 ```
