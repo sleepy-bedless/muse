@@ -5,7 +5,7 @@ Initially designed for Python, but if you want, you can easily use it in cpp fil
 ## Contents
 > [How it may help you](https://github.com/sleepy-bedless/muse/blob/main/README.md#how-it-may-help-you)  
 > [Install muse](https://github.com/sleepy-bedless/muse/blob/main/README.md#install-muse)  
-> [Create brand-new music](https://github.com/sleepy-bedless/muse/blob/main/README.md#create-brand-new-music)
+> [Create brand-new music](https://github.com/sleepy-bedless/muse/blob/main/README.md#create-brand-new-music)  
 > [Train your own model](https://github.com/sleepy-bedless/muse/blob/main/README.md#train-your-own-model)
 
 ## How it may help you
