@@ -78,8 +78,8 @@ void main()
 }
 ```
 ### Train your own model
-You can easily train your own model by `train.py`, in which case trained models are based on your given .mid files.  
-The `train.py` uses [NumPy](https://github.com/numpy/numpy) to build matrix and [mido](https://github.com/mido/mido) to deal with .mid files.  
+You can easily train your own model by `train.py`, in which case trained models are based on your given .mid files. The `train.py` uses [NumPy](https://github.com/numpy/numpy) to build matrix and [mido](https://github.com/mido/mido) to deal with .mid files.  
+  
 To train models, you can just open your terminal.
 ```
 python train.py --file='example.mid'
