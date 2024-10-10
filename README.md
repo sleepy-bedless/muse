@@ -5,7 +5,8 @@ Initially designed for Python, but if you want, you can easily use it in cpp fil
 ## Contents
 > [How it may help you](https://github.com/sleepy-bedless/muse/blob/main/README.md#how-it-may-help-you)  
 > [Install muse](https://github.com/sleepy-bedless/muse/blob/main/README.md#install-muse)  
-> [Create brand-new music](https://github.com/sleepy-bedless/muse/blob/main/README.md#create-brand-new-music)  
+> [Create brand-new music](https://github.com/sleepy-bedless/muse/blob/main/README.md#create-brand-new-music)
+> [Train your own model](https://github.com/sleepy-bedless/muse/blob/main/README.md#train-your-own-model)
 
 ## How it may help you
 - __A real time pure music player.__  
@@ -76,4 +77,23 @@ void main()
     midi_note.close();
 }
 ```
-#### i will write all, maybe tomorrow
+### Train your own model
+You can easily train your own model by `train.py`, in which case trained models are based on your given .mid files.  
+The `train.py` uses [NumPy](https://github.com/numpy/numpy) to build matrix and [mido](https://github.com/mido/mido) to deal with .mid files.  
+To train models, you can just open your terminal.
+```
+python train.py --file='example.mid'
+```
+Of course you can offer a dir of files, and then your model will be based on all .mid files in the dir. (Please note that files with incorrect extensions will never disturb training)
+```
+python train.py --dir='./test'
+```
+Your default model names will be: `output_note.model`, `output_velocity.model` and `output_time.model`. To use your own name, add `--output` like this, and model names are turned to `test_note.model`, etc.
+```
+python train.py --file='example.mid' --output='test'
+```
+The result should, in default condition, be rounded up to 12 decimal places. If you want to round it to, say 10 decimal places, follow this:
+```
+python train.py --dir='./test', --number=10
+```
+__Note__: If you offer `--file` and `--dir` at a same time, only the result of `--dir` will be remained.
