@@ -3,7 +3,7 @@ A simple real time music generator based on Markov Chain.
 Initially designed for Python, but if you want, you can easily use it in cpp files.
 
 ## Contents
-> [How it may help you](https://github.com/sleepy-bedless/muse/tree/main?tab=readme-ov-file#how-it-may-help-you))  
+> [How it may help you](https://github.com/sleepy-bedless/muse/tree/main?tab=readme-ov-file#how-it-may-help-you)  
 > [Install muse](https://github.com/sleepy-bedless/muse/tree/main?tab=readme-ov-file#install-muse)  
 > [Create brand-new music](https://github.com/sleepy-bedless/muse/tree/main?tab=readme-ov-file#create-brand-new-music)  
 > [Train your own model](https://github.com/sleepy-bedless/muse/tree/main?tab=readme-ov-file#train-your-own-model)
