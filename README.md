@@ -97,3 +97,6 @@ The result should, in default condition, be rounded up to 12 decimal places. If 
 python train.py --dir='./test', --number=10
 ```
 __Note__: If you offer `--file` and `--dir` at a same time, only the result of `--dir` will be remained.
+  
+## Maybe something more?
+Initially, `muse` is designed for programs that use `tkinter`. So, maybe I can write a simple GUI so that users can easily train and use models? Well, i shoul d go to b e d . Zzz
